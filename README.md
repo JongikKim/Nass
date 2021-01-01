@@ -2,7 +2,7 @@
 
 This code accompaines the following paper:
 
-Jongik Kim, "Boosting Graph Similarity Search through Pre-computation", accepted for publication in SIGMOD 2021 (a preliminary version is available at [arxiv:2004.01124](http://arxiv.org/abs/2004.01124)).
+Jongik Kim, "Boosting Graph Similarity Search through Pre-computation", accepted for publication in SIGMOD 2021 (a preliminary version is available online at [arxiv:2004.01124](http://arxiv.org/abs/2004.01124)).
 
 Sample data files and index files are included in the "data" directory. 
 Please uncompress the data and index files before using them (e.g., gzip -d *.gz).
