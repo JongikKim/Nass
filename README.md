@@ -1,12 +1,12 @@
 # Nass
 
-This code accompaines the following paper: Jongik Kim, "Boosting Graph Similarity Search through Pre-computation", accepted for publication in SIGMOD 2021 (preliminary version in [arxiv:2004.01124](http://arxiv.org/abs/2004.01124)).
+This code accompaines the following paper:
+
+Jongik Kim, "Boosting Graph Similarity Search through Pre-computation", accepted for publication in SIGMOD 2021 (a preliminary version is available at [arxiv:2004.01124](http://arxiv.org/abs/2004.01124)).
 
 Sample data files and index files are included in the "data" directory. 
 Please uncompress the data and index files before using them (e.g., gzip -d *.gz).
-
 The included AIDS and PubChem indices have been constructed with thresholds 9 and 8, respectively.
-
 The code has been complied and tested in Ubuntu and MacOS.
 
 # How to build binaries (both nass and nass-index)
@@ -52,7 +52,7 @@ Nass also supports distributed index building. For distributed index building, t
 
 Do not specify any option for a client node. A client node receives necessary options from the coordinator. 
 
-For example, the following command construct an index of the AIDS dataset for threshold 5 using 3 distributed nodes (24 thresads in total), and save the index into the file AIDS.2GB.idx in the coordinator. We assume the ip address of the coordinator is 123.456.798.111
+For example, the following command construct an index of the AIDS dataset for threshold 5 using 3 distributed nodes (24 thresads in total), and save the index into the file AIDS.2GB.idx in the coordinator. We assume the ip address of the coordinator is 123.456.789.111
 > nass-index 5 data/AIDS AIDS.2GB.idx -p 8 -M 2000 --coordinator (coordinator) <br>
 > nass-index data/AIDS 123.456.789.111 (client 1) <br>
 > nass-index data/AIDS 123.456.789.111 (client 2)
