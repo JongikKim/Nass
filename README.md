@@ -65,8 +65,9 @@ We have an experimental sampling option in building an index. Our sampling optio
 To use sampling, we first build an index with a very low threshold. Nass utilizes the index to identify and sample graphs having similar graphs. For example, the following commands construct an index with 30% sampling rate.
 
 > nass-index 2 data/AIDS AIDS.sample.idx <br>
+><br>
 > nass-index 6 data/AIDS AIDS.sample.idx -s 30 -p 8 -M 2000 --coordinator <br>
 > nass-index data/AIDS 123.456.789.111
 
-The first command makes an index for sampling data graphs, which should be run very fast. Then the second command uses the index for sampling and construct index with 30% sampling rate. Note that the index constructed from the second command overwrites AIDS.sample.idx. The thrid command launches a client for distributed index building. For a client node, we don't need any options except the data file and the address of the coordinator.
+The first command makes an index for sampling data graphs, which should be run very fast. Then the second command uses the index for sampling and construct an index with 30% sampling rate. Note that the index constructed from the second command overwrites AIDS.sample.idx. The thrid command launches a client for distributed index building. For a client node, we don't need any options except the data file and the address of the coordinator.
 
