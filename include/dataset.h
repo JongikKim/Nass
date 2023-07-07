@@ -50,7 +50,7 @@ public:
 		cout << "Reading dataset .. " << flush;
 
 		coregraph* g = NULL;
-		for(int id = 0; (g=file.getNextGraph()) != NULL; id++){
+		while((g=file.getNextGraph()) != NULL){
 			data.push_back(g);
 
 			vsize_total += g->vsize();

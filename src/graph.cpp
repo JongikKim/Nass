@@ -237,14 +237,17 @@ void graph::reorder(graph& g)
     int tmp;
     SWAP(ordering[0], ordering[v], tmp);
 
+    const double EPS = 10e-6; // from the source code of AStarLSa
     for(unsigned next = 1; next < vsize(); next++){
         max = numeric_limits<double>::min();
 
         for(unsigned i = next; i < vsize(); i++){
 			double weight = 0.0;
             for(unsigned j = 0; j < next; j++)
-                if(elabel(i, j)) weight += WE(i, j);
-			if(weight != 0.0) weight += WV(i);
+                if(elabel(i, j)){
+                    if(weight < EPS) weight += WV(i); // from AStarLSa
+                    weight += WE(i, j);
+                }
             if(weight > max){ max = weight; v = i; }
         }
 
