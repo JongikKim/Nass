@@ -1,6 +1,6 @@
 # Nass
 
-This code accompaines the following paper:
+This code accompanies the following paper:
 
 Jongik Kim, "Boosting Graph Similarity Search through Pre-computation", SIGMOD 2021 (a preliminary version is available online at [arxiv:2004.01124](http://arxiv.org/abs/2004.01124)).
 
